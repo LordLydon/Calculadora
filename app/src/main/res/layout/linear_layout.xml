@@ -146,6 +146,8 @@
                     android:id="@+id/button30"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="96dp"
+                    android:layout_marginRight="96dp"
                     android:layout_weight="1"
                     android:onClick="onNumericClick"
                     android:text="0"

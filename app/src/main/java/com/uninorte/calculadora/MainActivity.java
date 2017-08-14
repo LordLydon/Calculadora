@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        tvRes = (TextView) findViewById(R.id.textView);
-        //setContentView(R.layout.linear_layout);
-        //tvRes = (TextView) findViewById(R.id.textView2);
+        //setContentView(R.layout.activity_main);
+        //tvRes = (TextView) findViewById(R.id.textView);
+        setContentView(R.layout.linear_layout);
+        tvRes = (TextView) findViewById(R.id.textView2);
     }
 
     public void onNumericClick(View view) {
