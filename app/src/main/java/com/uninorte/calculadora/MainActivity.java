@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tvRes = (TextView) findViewById(R.id.textView);
+        //setContentView(R.layout.linear_layout);
+        //tvRes = (TextView) findViewById(R.id.textView2);
     }
 
     public void onNumericClick(View view) {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onOpClick(View view) {
         Button b = (Button) view;
+
         if (op != null) {
             switch (op) {
                 case "+":
@@ -49,9 +52,11 @@ public class MainActivity extends AppCompatActivity {
                 op = b.getText().toString();
             }
         } else {
-            n1 = result;
-            op = b.getText().toString();
-            result = 0;
+            if (!Objects.equals(b.getText().toString(), "=")) {
+                n1 = result;
+                op = b.getText().toString();
+                result = 0;
+            }
         }
         tvRes.setText(String.format("%.0f", result));
     }
